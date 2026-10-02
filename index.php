@@ -1,1 +1,3 @@
-<?php echo "Hello, my Task Planner is working!"; ?>
+<?php
+require "includes/db.php";
+echo "Database connected successfully!";
