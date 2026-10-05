@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+.box {
+  background: white;
+  padding: 30px;
+  width: 340px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.box h2 { text-align: center; margin-top: 0; }
+.box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 14px;
+  box-sizing: border-box;
+}
+.box button {
+  width: 100%;
+  padding: 10px;
+  background: #2f6fed;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.error { color: red; font-size: 14px; }
+.success { color: green; font-size: 14px; }
+
+.wide { width: 600px; }
+.task {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.task h4 { margin: 0 0 4px; }
+.task p { margin: 4px 0; font-size: 14px; color: #555; }
+.badge {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #ffe9b3;
+}
+.badge.done { background: #c8f2cf; }
+.btn-link {
+  display: inline-block;
+  background: #2f6fed;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 14px;
+  box-sizing: border-box;
+}
+.actions { margin-top: 8px; }
+.actions form { display: inline; }
+.small-btn {
+  font-size: 13px;
+  padding: 4px 10px;
+  border: 1px solid #2f6fed;
+  background: white;
+  color: #2f6fed;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.small-btn.danger { border-color: #d33; color: #d33; }
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 14px;
+  box-sizing: border-box;
+}
