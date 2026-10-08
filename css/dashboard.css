@@ -102,3 +102,123 @@ body { margin: 0; font-family: Arial, sans-serif; background: #f5f6fa; color: #2
 .back-link { margin-left: 14px; font-size: 14px; color: #666; text-decoration: none; }
 .back-link:hover { color: #e5383b; }
 .error { color: #e5383b; font-size: 14px; background: #fdeaea; padding: 8px 12px; border-radius: 6px; }
+/* Day planner */
+.date-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.date-bar input { padding: 9px 12px; border: 1px solid #d5d8e0; border-radius: 8px; font-size: 14px; }
+.planner-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.planner-grid .card { margin-bottom: 0; }
+.lines input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cfd5e3;
+  padding: 9px 4px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: transparent;
+}
+.lines input:focus { outline: none; border-bottom-color: #e5383b; }
+.notes-area {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid #d5d8e0;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+.success { color: #1fa64a; background: #e6f6ea; padding: 8px 12px; border-radius: 6px; font-size: 14px; margin-bottom: 16px; }
+.mini-task { font-size: 14px; padding: 6px 0; border-bottom: 1px dotted #ddd; display: flex; align-items: center; gap: 8px; }
+.mini-task a { color: inherit; text-decoration: none; }
+.full { grid-column: 1 / -1; }
+@media (max-width: 900px) { .planner-grid { grid-template-columns: 1fr; } }
+/* Schedule */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(9, auto);
+  grid-auto-flow: column;
+  column-gap: 28px;
+}
+.slot { display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #e5e7ee; }
+.slot-time { width: 54px; font-size: 13px; color: #555; flex-shrink: 0; }
+.slot input {
+  flex: 1;
+  border: none;
+  padding: 10px 4px;
+  font-size: 14px;
+  font-family: inherit;
+  background: transparent;
+  min-width: 0;
+}
+.slot input:focus { outline: none; background: #fafbfd; }
+@media (max-width: 900px) {
+  .schedule-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
+}
+/* Habit tracker */
+.table-wrap { overflow-x: auto; }
+.habit-table { width: 100%; border-collapse: collapse; }
+.habit-table th, .habit-table td { padding: 10px 6px; text-align: center; border-bottom: 1px solid #e5e7ee; font-size: 14px; }
+.habit-table th small { display: block; font-weight: normal; color: #888; font-size: 11px; }
+.habit-table th:first-child, .habit-table td:first-child { text-align: left; }
+.habit-table .today { background: #fff4f4; }
+.habit-table input[type=checkbox] { width: 18px; height: 18px; accent-color: #e5383b; cursor: pointer; }
+.week-nav { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.week-nav a { color: #e5383b; text-decoration: none; font-size: 14px; }
+.inline-form { display: flex; gap: 10px; margin-bottom: 14px; }
+.inline-form input { flex: 1; padding: 9px 12px; border: 1px solid #d5d8e0; border-radius: 8px; font-size: 14px; }
+.habit-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dotted #ddd; font-size: 14px; }
+.habit-item form { display: inline; }
+/* Daily reminders */
+.reminders { list-style: none; padding: 0; margin: 0 0 14px; }
+.reminders li { padding: 6px 0 6px 26px; position: relative; font-size: 14px; }
+.reminders li::before { content: "♡"; position: absolute; left: 0; color: #e5383b; }
+.quote {
+  background: #fff4f4;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  margin: 0;
+}
+/* Colorful dashboard */
+body { background: linear-gradient(135deg, #f5f6fa 0%, #fdf0f4 100%); }
+.sidebar { background: linear-gradient(180deg, #0b0b12 0%, #2a0f1f 100%); }
+.avatar { background: linear-gradient(135deg, #e5383b, #ff8c42); }
+.nav a.active { background: linear-gradient(90deg, #ffffff, #ffe9ec); }
+.subtitle { color: #777; margin: -16px 0 24px; font-size: 14px; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+.stat { border-radius: 14px; padding: 20px; color: #fff; box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12); }
+.stat-num { display: block; font-size: 34px; font-weight: bold; }
+.stat-label { font-size: 14px; opacity: 0.95; }
+.s-total { background: linear-gradient(135deg, #7b2ff7, #f107a3); }
+.s-completed { background: linear-gradient(135deg, #11998e, #38ef7d); }
+.s-progress { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+.s-notstarted { background: linear-gradient(135deg, #ff512f, #f09819); }
+
+.col { min-width: 0; }
+.card { border: none; box-shadow: 0 2px 10px rgba(30, 30, 60, 0.07); }
+.card-head h3 { color: #222; }
+
+.task-card { border-left: 5px solid #2f6fed; }
+.task-card.p-low { border-left-color: #1fa64a; background: #f3fbf5; }
+.task-card.p-moderate { border-left-color: #2f6fed; background: #f3f7ff; }
+.task-card.p-extreme { border-left-color: #e5383b; background: #fff4f4; }
+
+.prio-list { list-style: none; padding: 0; margin: 0; }
+.prio-list li { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px dotted #ddd; font-size: 14px; }
+.prio-num { width: 24px; height: 24px; border-radius: 50%; background: #e8edff; color: #2f6fed; font-weight: bold; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+.progress { height: 12px; background: #eceef4; border-radius: 10px; overflow: hidden; margin: 10px 0 8px; }
+.progress span { display: block; height: 100%; background: linear-gradient(90deg, #f7971e, #ffd200); border-radius: 10px; }
+.small-text { font-size: 13px; color: #666; margin: 0; }
+
+.due-row { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px dotted #ddd; font-size: 14px; }
+.due-row small { color: #666; white-space: nowrap; }
+.pill-late { background: #fdeaea; color: #e5383b; padding: 2px 8px; border-radius: 10px; font-size: 12px; margin-left: 6px; }
+
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(2, 1fr); } }

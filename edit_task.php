@@ -74,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <nav class="nav">
         <a href="dashboard.php">Dashboard</a>
         <a href="add_task.php">+ Add Task</a>
+        <a href="habits.php">Habit Tracker</a>
         <a href="logout.php">Logout</a>
       </nav>
     </aside>
@@ -121,6 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
           <button class="btn-primary" type="submit">Update task</button>
           <a class="back-link" href="dashboard.php">Cancel</a>
+          <a href="planner.php">Day Planner</a>
         </form>
       </section>
     </main>

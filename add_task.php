@@ -61,7 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
       <button type="submit">Save task</button>
     </form>
-    <p><a href="dashboard.php">Back to dashboard</a></p>
+    <p><a href="dashboard.php">Back to dashboard</a>
+        <a href="planner.php">Day Planner</a> 
+        <a href="habits.php">Habit Tracker</a>
+    </p>
   </div>
 </body>
 </html>
